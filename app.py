@@ -265,7 +265,7 @@ DISEASE_CATALOG = {
 # STYLING & CUSTOM CSS (Professional Light Palette)
 # ---------------------------------------------------------
 st.set_page_config(
-    page_title="AI Disease Prediction & Health Recommendation System",
+    page_title=" Disease Prediction & Health Recommendation System",
     page_icon="🩺",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -288,13 +288,13 @@ st.markdown("""
     }
     
     h1, h2, h3, h4, h5, h6 {
-        font-family: 'Outfit', sans-serif;
-        color: #0f172a;
-        font-weight: 600 !important;
+    font-family: 'Outfit', sans-serif;
+    color: #0f172a;
+    font-weight: 600;
     }
-    
+
     p, span, li, label {
-        color: #334155 !important; /* slate-700 */
+    color: #334155;
     }
     
     /* Professional Corporate Header */
@@ -310,17 +310,31 @@ st.markdown("""
     .header-box h1 {
         color: #ffffff !important;
         font-weight: 700 !important;
-        margin: 0 0 0.6rem 0;
+        margin: 0 0 0.8rem 0;
         letter-spacing: -0.02em;
         font-size: 2.3rem;
-        text-shadow: 0 2px 8px rgba(15, 23, 42, 0.5);
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
     }
     .header-box p {
-        color: #ccfbf1 !important; /* Minty light teal for superb readability */
+        color: #f1f5f9 !important; /* Soft white/light gray slate-100 for superb professional contrast */
         font-size: 1.15rem;
         margin: 0;
         font-weight: 500;
+        letter-spacing: 0.01em;
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
     }
+    .header-box *{
+    color:#ffffff !important;
+    }
+
+.header-box h1,
+.header-box h2,
+.header-box h3,
+.header-box p,
+.header-box span,
+.header-box div{
+    color:#ffffff !important;
+}
     
     /* Sidebar Layout (Clean, subtle border) */
     [data-testid="stSidebar"] {
@@ -771,8 +785,8 @@ model, scaler, label_encoder, metadata, load_error = load_ml_models()
 # Banner / Header
 st.markdown("""
 <div class="header-box">
-    <h1 style="color: #ffffff !important;">AI Disease Prediction & Health Recommendation System</h1>
-    <p style="color: #ffffff !important;">Educational Screening & Interactive Clinical Analysis Dashboard</p>
+    <h1>AI Disease Prediction & Health Recommendation System</h1>
+    <p>Educational Screening & Interactive Clinical Analysis Dashboard</p>
 </div>
 """, unsafe_allow_html=True)
 
