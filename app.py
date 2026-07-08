@@ -534,16 +534,16 @@ def load_ml_models():
     Returns (model, scaler, label_encoder, metadata, error_message).
     """
     paths = {
-        "model": os.path.join("saved_models", "best_model.pkl"),
-        "scaler": os.path.join("saved_models", "scaler.pkl"),
-        "encoder": os.path.join("saved_models", "label_encoder.pkl"),
-        "metadata": os.path.join("saved_models", "model_metadata.json")
+        "model": "best_model.pkl",
+        "scaler": "scaler.pkl",
+        "encoder": "label_encoder.pkl",
+        "metadata": "model_metadata.json"
     }
     
     # Check if files exist
     for name, path in paths.items():
         if not os.path.exists(path):
-            return None, None, None, None, f"Missing file: `{path}`. Please run `train_model.py` to train and serialize the model first."
+            return None, None, None, None, f"Missing file: `{path}`. Please run the training script to train and serialize the model first."
             
     try:
         with open(paths["model"], "rb") as f:
